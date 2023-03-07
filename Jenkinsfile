@@ -27,7 +27,7 @@ node {
    // ------------------------------------
    stage 'Test'
    echo 'Ejecutando tests'
-   try{
+   //try{
       sh 'mvn verify'
       step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
    }catch(err) {
